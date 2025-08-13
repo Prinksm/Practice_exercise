@@ -12,7 +12,7 @@ public class ClientM {
              PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
              Scanner scanner = new Scanner(System.in)) {
             System.out.println("Connected to Server");
-            System.out.println("Enter commands like: SUM 1+2 | SUB 4-2 | MUL 3*3 | DIV 8/2");
+            System.out.println("Enter commands like: SUM | SUB  | MUL  | DIV ");
             System.out.println("Type EXIT to quit.");
             while (true) {
                 String input = scanner.nextLine();
@@ -24,7 +24,7 @@ public class ClientM {
                 System.out.println(response);
             }
         } catch (IOException e) {
-            System.out.println(":x: Could not connect to server: " + e.getMessage());
+            System.out.println(" Could not connect to server: " + e.getMessage());
         }
     }
 }
